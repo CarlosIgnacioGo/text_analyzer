@@ -11,10 +11,10 @@ replacements_words.each do |replacement|
 end
 
 def text_valid?(text)
-	if /(9[6-9][0-9]{7})/.match(text)
-		puts "true"
+	if /(9[6-9][0-9]{7})/.match(text) || /([2-9][0-9]{8})/.match(text) || /([3-7][1-9][2-9][0-9]{5,6})/.match(text) || /\S+@\S+\.\S+/.match(text)
+		puts 'false'
 	else
-		puts "false"
+	  puts 'true'
 	end
 end
 
